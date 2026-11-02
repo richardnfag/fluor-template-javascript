@@ -1,0 +1,7 @@
+[function]
+name = "{{project-name}}"
+language = "javascript"
+
+[trigger]
+type = "http"
+route = "/{{project-name}}"
