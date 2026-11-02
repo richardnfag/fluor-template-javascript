@@ -123,11 +123,19 @@ function queryParam(query, key) {
         if (separator === -1) {
             continue;
         }
-        if (part.slice(0, separator) === key) {
-            return part.slice(separator + 1);
+        if (formDecode(part.slice(0, separator)) === key) {
+            return formDecode(part.slice(separator + 1));
         }
     }
     return null;
+}
+
+function formDecode(value) {
+    try {
+        return decodeURIComponent(value.replace(/\+/g, ' '));
+    } catch {
+        return value;
+    }
 }
 
 function jsonStringField(body, field) {
