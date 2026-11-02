@@ -6,6 +6,7 @@ Starter template for a Fluor function in JavaScript using `jco componentize`.
 
 - Node.js 20+
 - `npx` available
+- `just`: `cargo install just`
 - Optional inspection: `cargo install --locked wasm-tools`
 
 ## Build
